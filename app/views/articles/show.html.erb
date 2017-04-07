@@ -1,12 +1,55 @@
-<h2>Showing Selected Article</h2>
+<style>
+  body {
+    background-color: #5D686B !important;
+  }
+</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tier List</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class= "row col-lg-6 col-lg-offset-3 text-center" id="logo">
+  <%= image_tag("OP-or-Nah.png", :alt => "rss feed") %>
+</div>
+<div class="row col-lg-6 col-lg-offset-3 text-center insideBackground">
+  <div class="container">
+    <div class="header clearfix">
+      <h3 class="text-muted"></h3>
+    </div>
 
-<p>
-  Title: <%= @article.title %>
+    <h2>Showing Selected Article</h2>
 
-</p>
+    <p>
+      Title: <%= @article.title %>
 
-<p>
-  Description: <%= @article.description %>
-</p>
-<%= link_to "Edit this article", edit_article_path(@article) %>
-<%= link_to "Back to articles", articles_path%>
+    </p>
+
+    <p>
+      Description: <%= @article.description %>
+    </p>
+    <%= link_to "Edit this article", edit_article_path(@article) %>
+    <%= link_to "Back to articles", articles_path%>
+
+    <footer class="footer">
+      <p>&copy; 2017 Designed/Developer James DuBois</p>
+    </footer>
+
+  </div> <!-- /container -->
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+

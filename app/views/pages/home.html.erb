@@ -13,13 +13,13 @@
   <![endif]-->
 </head>
 <body>
+<%= render 'layouts/navigation' %>
 <div class= "row col-lg-6 col-lg-offset-3 text-center" id="logo">
-  <img src="images/Op-or-Nah.png">
+  <%= image_tag("OP-or-Nah.png", :alt => "rss feed") %>
 </div>
 <div class="row col-lg-6 col-lg-offset-3 text-center insideBackground">
   <div class="container">
     <div class="header clearfix">
-<%= render 'layouts/navigation' %>
       <h3 class="text-muted"></h3>
     </div>
 
@@ -29,30 +29,7 @@
     </div>
 
 
-    <div class="alert alert-success" role="alert">
-      <a href="#" class="alert-link">...</a>
-    </div>
-    <div class="alert alert-info" role="alert">
-      <a href="#" class="alert-link">...</a>
-    </div>
-    <div class="alert alert-warning" role="alert">
-      <a href="#" class="alert-link">...</a>
-    </div>
-    <div class="alert alert-danger" role="alert">
-      <a href="#" class="alert-link">...</a>
-    </div>
-    <div class="alert alert-success" role="alert">
-      <a href="#" class="alert-link">...</a>
-    </div>
-    <div class="alert alert-info" role="alert">
-      <a href="#" class="alert-link">...</a>
-    </div>
-    <div class="alert alert-warning" role="alert">
-      <a href="#" class="alert-link">...</a>
-    </div>
-    <div class="alert alert-danger" role="alert">
-      <a href="#" class="alert-link">...</a>
-    </div>
+  <%= render 'articles/listarticles' %>
 
     <footer class="footer">
       <p>&copy; 2017 Designed/Developer James DuBois</p>
