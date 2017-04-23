@@ -1,4 +1,5 @@
-class PagesController < ActionController::Base
+class PagesController < ApplicationController
+  include ApplicationHelper
   def home
   @articles = Article.all
   end
