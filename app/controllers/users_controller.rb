@@ -1,6 +1,6 @@
 class UsersController <ApplicationController
 
-  before_action :require_same_user, only: [:edit, :update]
+
 
 
   def new
@@ -10,8 +10,9 @@ class UsersController <ApplicationController
   def create
     @user = User.create(user_params)
     if @user.save
+      session[:user_id] = @user_id
       flash[:success] = "Welcome to the OP-OR-Nah Community #{@user.username}"
-      redirect_to articles_path
+      redirect_to user_path(@user)
     else
       render 'new'
     end
