@@ -1,24 +1,8 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This was my first project that is written in ruby using ruby on rails 5. This is a blog to talk about league of legends
 
-Things you may want to cover:
+* Senior Project - 2017
+* Ruby version 5.0.1
 
-* Ruby version
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
