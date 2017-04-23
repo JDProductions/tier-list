@@ -1,7 +1,6 @@
 class UsersController <ApplicationController
 
-
-
+  before_action :require_admin, only:[:destroy]
 
   def new
     @user = User.new
@@ -20,6 +19,13 @@ class UsersController <ApplicationController
 
   def index
     @user = User.all
+  end
+
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    flash[:danger] = "User and all articles that have created by the user have been deleted"
+    redirect_to users_path
   end
 
 
@@ -52,7 +58,14 @@ end
       flash[:danger] = "You can only edit your own account!"
       redirect_to root_path
     end
+  end
+
+  def require_admin
+    if logged_in? && !current_user.admin?
+      flash[:danger] = "Only admin users can perform that action"
+      redirect_to root_path
     end
+  end
 
 
 end
