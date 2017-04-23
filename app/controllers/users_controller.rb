@@ -1,6 +1,7 @@
 class UsersController <ApplicationController
 
   before_action :require_admin, only:[:destroy]
+  #before_action :require_same_user, only: [:edit, :update]
 
   def new
     @user = User.new
@@ -9,9 +10,8 @@ class UsersController <ApplicationController
   def create
     @user = User.create(user_params)
     if @user.save
-      session[:user_id] = @user_id
       flash[:success] = "Welcome to the OP-OR-Nah Community #{@user.username}"
-      redirect_to user_path(@user)
+      redirect_to articles_path
     else
       render 'new'
     end
